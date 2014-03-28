@@ -7,17 +7,22 @@
 		<script type="text/javascript" src="js/app.js"></script>
 		<script type="text/javascript" src="js/view.js"></script>
 		<script type="text/javascript" src="js/radar.js"></script>
+		<script type="text/javascript" src="js/money.js"></script>
 	</head>
 	<body class="container" ng-app ="Mangekyou">
 		<div class="row" ng-controller="viewController">
 			<a href="#" ng-click="menu = 'entry'">Entry</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a href="#" ng-click="menu = 'radar'">Radar</a>
+			<a href="#" ng-click="menu = 'radar'">Radar</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a href="#" ng-click="menu = 'ads'">ads</a>
 			<div ng-switch on="menu">
 				<div ng-switch-when="entry">
 					<div  ng-include="'partials/entry.html'"></div>
 				</div>
 				<div ng-switch-when="radar">
 					<div  ng-include="'partials/radar.html'"></div>
+				</div>
+				<div ng-switch-when="ads">
+					<div ng-include="'partials/money.html'"></div>
 				</div>
 			</div>
 		</div>
