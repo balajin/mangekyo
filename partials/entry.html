@@ -1,30 +1,30 @@
 <div ng-controller="formController">
-			<div>
+			<div class="form-group">
 				<label>Userid:</label>			
-				<input ng-model="userid"/>
+				<input class="form-control" ng-model="userid"/>
 			</div>
-			<div>
+			<div class="form-group">
 				<label>Label:</label>			
-				<input ng-model="label"/>
+				<input class="form-control" ng-model="label"/>
 			</div>
-			<div>
+			<div class="form-group">
 				<label>Type	:</label>
-				<select ng-model="type">
+				<select class="form-control" ng-model="type">
 					<option selected value="language">Language</option>
 					<option value="tool">Tool</option>
 					<option value="technique">Technique</option>
 				</select>
 			</div>
-			<div>
+			<div class="form-group">
 				<label>Opinion	:</label>
-				<select ng-model="opinion">
+				<select class="form-control" ng-model="opinion">
 					<option selected value="adopt">Adopt</option>
 					<option value="access">Access</option>
 					<option value="hold">Hold</option>
 					<option value="trial">Trial</option>
 				</select>
 			</div>
-			<div>
-				<button ng-click="submit()">Submit</button>
+			<div class="form-group">
+				<button class="form-control" ng-click="submit()">Submit</button>
 			</div>
 </div>

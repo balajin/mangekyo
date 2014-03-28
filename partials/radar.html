@@ -1,0 +1,21 @@
+<div ng-controller="radarController">
+	<div><b>Adopt</b></div>
+	<ul style="list-style-type:none">
+		<div ng-repeat="adopt in response.adopt">
+			<li>
+				<div>
+					<label>Label:</label>
+					<span>{{adopt.label}}</span>
+				</div>
+				<div>
+					<label>Type:</label>
+					<span>{{adopt.type}}</span>
+				</div>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+			</li>
+		</div>
+	</ul>
+</div>
