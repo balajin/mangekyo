@@ -1,0 +1,30 @@
+<div ng-controller="formController">
+			<div>
+				<label>Userid:</label>			
+				<input ng-model="userid"/>
+			</div>
+			<div>
+				<label>Label:</label>			
+				<input ng-model="label"/>
+			</div>
+			<div>
+				<label>Type	:</label>
+				<select ng-model="type">
+					<option selected value="language">Language</option>
+					<option value="tool">Tool</option>
+					<option value="technique">Technique</option>
+				</select>
+			</div>
+			<div>
+				<label>Opinion	:</label>
+				<select ng-model="opinion">
+					<option selected value="adopt">Adopt</option>
+					<option value="access">Access</option>
+					<option value="hold">Hold</option>
+					<option value="trial">Trial</option>
+				</select>
+			</div>
+			<div>
+				<button ng-click="submit()">Submit</button>
+			</div>
+</div>
