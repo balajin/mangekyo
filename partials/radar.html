@@ -1,9 +1,8 @@
 <div ng-controller="radarController">
-	
-	
 		<div><b>Techniques</b></div>
+		<hr/>
 		<ul style="list-style-type:none">
-		<div ng-repeat="technique in response.techniques">
+		<div ng-repeat="technique in response.technique">
 			<li>
 				<div>
 					<label>Label:</label>
@@ -13,16 +12,18 @@
 					<label>Opinion:</label>
 					<span>{{technique.opinion}}</span>
 				</div>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
+				<div>
+					<label>Supported by:</label>
+					<span>{{tool.support}}</span>
+				</div>
 			</li>
+			<hr/>
 		</div>
 		</ul>
 		<div><b>Tools</b></div>
+		<hr/>
 		<ul style="list-style-type:none">
-		<div ng-repeat="tool in response.tools">
+		<div ng-repeat="tool in response.tool">
 			<li>
 				<div>
 					<label>Label:</label>
@@ -32,16 +33,18 @@
 					<label>Opinion:</label>
 					<span>{{tool.opinion}}</span>
 				</div>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
+				<div>
+					<label>Supported by:</label>
+					<span>{{tool.support}}</span>
+				</div>
 			</li>
+			<hr/>
 		</div>
 		</ul>
 		<div><b>Languages</b></div>
+		<hr/>
 		<ul style="list-style-type:none">
-		<div ng-repeat="language in response.languages">
+		<div ng-repeat="language in response.language">
 			<li>
 				<div>
 					<label>Label:</label>
@@ -51,11 +54,12 @@
 					<label>Opinion:</label>
 					<span>{{language.opinion}}</span>
 				</div>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
+				<div>
+					<label>Supported by:</label>
+					<span>{{tool.support}}</span>
+				</div>
 			</li>
+			<hr/>
 		</div>
 		</ul>
 </div>
