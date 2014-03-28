@@ -9,11 +9,15 @@ app.config(['$httpProvider', function($httpProvider) {
 app.controller('formController', ['$scope', '$http', function($scope, $http) {
 	$scope.submit = function(){
 		var request = {
-			opinion: $scope.opinion,
-			userid: $scope.userid,
-			label:  $scope.label,
-			type: $scope.type 
+			_id: $scope.userid,
+			allPoints:[
+			 	{
+			 		opinion: $scope.opinion,
+					label:  $scope.label,
+					type: $scope.type 
+				}
+			]
 		}
-		$http.post('http://localhost:5984/mangekyou', request);
+		$http.put('http://localhost:5984/mangekyou/_design/radar/_update/upsert/' + $scope.userid, request);
 	}
 }])
