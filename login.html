@@ -1,17 +1,58 @@
 <html>
 	<head>
 		<title>Mangakyuo</title>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	</head>
 
         <body>
+        <style type="text/css">
+
+        #title{
+            width:100%;
+            height:40%;
+            background-image:url(./images/background.jpg);
+        }
+
+        #signin {
+            background-color: BLUE;
+            color: WHITE;
+            width: 10px;
+
+        }
+
+        #header{
+            padding: 40 420;
+        }
+        #signin{
+            width: 181px;
+            height: 54px;
+        }
+
+        .text {
+            font-size: 2.5em;
+        }
+
+        body {
+            text-align: center;
+        }
+
+
+        </style>
+        <div id="title">
+        <img id = "header" src="./images/title.png">
+        </div>
+        <div class="text">
+        <b>Mankeyo</b>
+        helps you keep upto pace with the latest and greatest in the technology space.
+        </div>
+        <form action='https://www.linkedin.com/uas/oauth2/authorization' method='GET' id='login'>
+            <input type='button' name='sbutton' id="signin" value='Sign in to LinkedIN' onclick='return do_login()'/>
+        </form>
         <script type="text/javascript">
         var do_login = function(){
             document.location.href = "https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=7577fwxufljky5&scope=r_network&state=DCEEFWF45453sdffef424&redirect_uri=http://localhost:5555/auth_form.html"
 
         }
        </script>
-        <form action='https://www.linkedin.com/uas/oauth2/authorization' method='GET' id='login'>
-            <input type='button' name='sbutton' value='Linked IN sign' onclick='return do_login()'/>
-        </form>
         </body>
 </html>
