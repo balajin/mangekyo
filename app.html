@@ -12,13 +12,16 @@
 		<script type="text/javascript" src="js/money.js"></script>
 		<script type="text/javascript" src="js/trending.js"></script>
 	</head>
-	<body class="container" ng-app ="Mangekyou">
+	<body class="container" ng-app ="Mangekyou" >
+		<h1>Mangekyou</h1>
 		<div class="row" ng-controller="viewController">
-			<a href="#" ng-click="menu = 'entry'">Entry</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a href="#" ng-click="menu = 'change'">Change</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a href="#" ng-click="menu = 'radar'">Radar</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a href="#" ng-click="menu = 'ads'">Ads</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a href="#" ng-click="menu = 'trending'">Trending</a>
+		<ul id="top-nav" class="nav nav-tabs" style="height:10%;">
+			<li class="active"><a href="#" ng-click="menu = 'entry'">Entry</a></li>
+			<li><a href="#" ng-click="menu = 'change'">Change</a></li>
+			<li><a href="#" ng-click="menu = 'radar'">Radar</a></li>
+			<li><a href="#" ng-click="menu = 'ads'">Ads</a></li>
+			<li><a href="#" ng-click="menu = 'trending'">Trending</a></li>
+			</ul>
 			<div ng-switch on="menu">
 				<div ng-switch-when="entry">
 					<div  ng-include="'partials/entry.html'"></div>
