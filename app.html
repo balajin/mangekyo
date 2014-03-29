@@ -19,18 +19,18 @@
 		<h1>Mangekyou</h1>
 		<div role="form" ng-controller="viewController">
 		<ul id="top-nav" class="nav nav-tabs" style="height:10%;" >
-			<li class="active"><a href="#" ng-click="menu = 'entry'">Entry</a></li>
-			<li><a href="#" ng-click="menu = 'change'">Change</a></li>
-			<li><a href="#" ng-click="menu = 'radar'">Radar</a></li>
-			<li><a href="#" ng-click="menu = 'ads'">Ads</a></li>
-			<li><a href="#" ng-click="menu = 'trending'">Trendsetters</a></li>
+			<li ng-class="{active : menu=='entry'}"><a href="#" ng-click="menu = 'entry'">Entry</a></li>
+			<li ng-class="{active : menu=='change'}"><a href="#" ng-click="menu = 'change'">Change</a></li>
+			<li ng-class="{active : menu=='radar'}"><a href="#" ng-click="menu = 'radar'">Radar</a></li>
+			<li ng-class="{active : menu=='ads'}"><a href="#" ng-click="menu = 'ads'">Ads</a></li>
+			<li ng-class="{active : menu=='training'}"><a href="#" ng-click="menu = 'trending'">Trendsetters</a></li>
 			</ul>
 			<div ng-switch on="menu">
 				<div ng-switch-when="entry">
 					<div class="row" ng-include="'partials/entry.html'"></div>
 				</div>
 				<div ng-switch-when="change">
-					<div class="row"  ng-include="'partials/change.html'"></div>
+					<div class="row" ng-include="'partials/change.html'"></div>
 				</div>
 				<div ng-switch-when="radar">
 					<div  ng-include="'partials/radar.html'"></div>
