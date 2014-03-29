@@ -9,13 +9,15 @@
 		<script type="text/javascript" src="js/change.js"></script>
 		<script type="text/javascript" src="js/radar.js"></script>
 		<script type="text/javascript" src="js/money.js"></script>
+		<script type="text/javascript" src="js/trending.js"></script>
 	</head>
 	<body class="container" ng-app ="Mangekyou">
 		<div class="row" ng-controller="viewController">
 			<a href="#" ng-click="menu = 'entry'">Entry</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 			<a href="#" ng-click="menu = 'change'">Change</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 			<a href="#" ng-click="menu = 'radar'">Radar</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a href="#" ng-click="menu = 'ads'">ads</a>
+			<a href="#" ng-click="menu = 'ads'">Ads</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a href="#" ng-click="menu = 'trending'">Trending</a>
 			<div ng-switch on="menu">
 				<div ng-switch-when="entry">
 					<div  ng-include="'partials/entry.html'"></div>
@@ -28,6 +30,9 @@
 				</div>
 				<div ng-switch-when="ads">
 					<div ng-include="'partials/money.html'"></div>
+				</div>
+				<div ng-switch-when="trending">
+					<div ng-include="'partials/trending.html'"></div>
 				</div>
 			</div>
 		</div>
