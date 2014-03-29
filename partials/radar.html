@@ -1,65 +1,46 @@
 <div ng-controller="radarController">
-		<div><b>Techniques</b></div>
-		<hr/>
-		<ul style="list-style-type:none">
-		<div ng-repeat="technique in response.technique">
-			<li>
-				<div>
-					<label>Label:</label>
-					<span>{{technique.label}}</span>
-				</div>
-				<div>
-					<label>Opinion:</label>
-					<span>{{technique.opinion}}</span>
-				</div>
-				<div>
-					<label>Supported by:</label>
-					<span>{{technique.support}}</span>
-				</div>
-			</li>
-			<hr/>
-		</div>
-		</ul>
-		<div><b>Tools</b></div>
-		<hr/>
-		<ul style="list-style-type:none">
-		<div ng-repeat="tool in response.tool">
-			<li>
-				<div>
-					<label>Label:</label>
-					<span>{{tool.label}}</span>
-				</div>
-				<div>
-					<label>Opinion:</label>
-					<span>{{tool.opinion}}</span>
-				</div>
-				<div>
-					<label>Supported by:</label>
-					<span>{{tool.support}}</span>
-				</div>
-			</li>
-			<hr/>
-		</div>
-		</ul>
-		<div><b>Languages</b></div>
-		<hr/>
-		<ul style="list-style-type:none">
-		<div ng-repeat="language in response.language">
-			<li>
-				<div>
-					<label>Label:</label>
-					<span>{{language.label}}</span>
-				</div>
-				<div>
-					<label>Opinion:</label>
-					<span>{{language.opinion}}</span>
-				</div>
-				<div>
-					<label>Supported by:</label>
-					<span>{{language.support}}</span>
-				</div>
-			</li>
-			<hr/>
-		</div>
-		</ul>
+    <div>
+    <div><b>Languages</b></div>
+		<svg id="language" class="chart"></svg>
+    </div>
+    <div>
+    <div><b>Tools</b></div>
+    <svg id="tool" class="chart"></svg>
+    </div>
+    <div>
+    <div>
+    <b>Techniques</b>
+    </div>
+    <svg id="technique" class="chart"></svg>
+    </div>
+<style>
+
+.chart div {
+  font: 14px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  font: 14px sans-serif;
+  text-anchor: middle;
+}
+.axis text {
+  font: 14px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+</style>
+
 </div>
