@@ -1,6 +1,12 @@
 <html>
 	<head>
 		<title>Mangekyou</title>
+		<style type="text/css">
+			.man {
+				font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+				font-size: 25px;
+			}
+		</style>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
 <!-- Optional theme -->
@@ -16,7 +22,13 @@
 		<script type="text/javascript" src="js/trending.js"></script>
 	</head>
 	<body class="container" ng-app ="Mangekyou" >
-		<h1>Mangekyou</h1>
+		<header class="navbar navbar-static-top">
+			<div class="container">
+			<div class="navbar-header man">
+				Mangekyou
+			</div>
+			</div>
+		</header>
 		<div role="form" ng-controller="viewController">
 		<ul id="top-nav" class="nav nav-tabs" style="height:10%;" >
 			<li ng-class="{active : menu=='entry'}"><a href="#" ng-click="menu = 'entry'">Entry</a></li>
